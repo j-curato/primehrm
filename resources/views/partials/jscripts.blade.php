@@ -1707,6 +1707,126 @@
              });
 
 
+            $(".btn-submit-btrainings").click(function(e){
+                e.preventDefault();
+                
+                  $('body').loadingModal({
+                       text: 'Loading...'
+                      });
+
+                  if($(this).text()=="Save Page 2 Section VII"){
+
+                    $.post("{{ url('/addemployeeBtraining') }}", $("#pds-btraining-form").serialize(), function(data){
+
+                            if(data.notify=='Success'){  
+                               $('body').loadingModal('hide');
+                                 swal({
+                                        title: "Record successfully saved",
+                                        text: "Message will close in 2 seconds",
+                                        type: "success",
+                                        timer: 2000
+                                      });
+
+                            } else{
+
+                              console.log(data.notify);
+
+                            }
+                        
+                        },"json");
+
+                    $(this).text("Update Page 2 Section VII");
+
+                  }else{
+
+                    $('body').loadingModal({
+                       text: 'Loading...'
+                      });
+
+                     $.post("{{ url('/updateEmpBTraining') }}", $("#pds-btraining-form").serialize(), function(data){
+
+                            if(data.notify=='Success'){  
+                               $('body').loadingModal('hide');
+                                 swal({
+                                        title: "Record successfully updated",
+                                        text: "Message will close in 2 seconds",
+                                        type: "success",
+                                        timer: 2000
+                                      });
+
+                            } else{
+
+                              console.log(data.notify);
+
+                            }
+                        
+                        },"json");
+
+                  }
+                                 
+             });
+
+
+            $(".btn-submit-ctrainings").click(function(e){
+                e.preventDefault();
+                
+                  $('body').loadingModal({
+                       text: 'Loading...'
+                      });
+
+                  if($(this).text()=="Save Page 3 Section VII"){
+
+                    $.post("{{ url('/addemployeeCtraining') }}", $("#pds-ctraining-form").serialize(), function(data){
+
+                            if(data.notify=='Success'){  
+                               $('body').loadingModal('hide');
+                                 swal({
+                                        title: "Record successfully saved",
+                                        text: "Message will close in 2 seconds",
+                                        type: "success",
+                                        timer: 2000
+                                      });
+
+                            } else{
+
+                              console.log(data.notify);
+
+                            }
+                        
+                        },"json");
+
+                    $(this).text("Update Page 3 Section VII");
+
+                  }else{
+
+                    $('body').loadingModal({
+                       text: 'Loading...'
+                      });
+
+                     $.post("{{ url('/updateEmpCTraining') }}", $("#pds-ctraining-form").serialize(), function(data){
+
+                            if(data.notify=='Success'){  
+                               $('body').loadingModal('hide');
+                                 swal({
+                                        title: "Record successfully updated",
+                                        text: "Message will close in 2 seconds",
+                                        type: "success",
+                                        timer: 2000
+                                      });
+
+                            } else{
+
+                              console.log(data.notify);
+
+                            }
+                        
+                        },"json");
+
+                  }
+                                 
+             });
+
+
               $(".btn-submit-sec8").click(function(e){
                 e.preventDefault();
 

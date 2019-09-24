@@ -3371,7 +3371,7 @@ tags will be replaced.-->
   <td class=xl6553527828></td>
  </tr>
 
- <form class="pds-training-form" id="pds-training-form" method="POST" enctype="multipart/form-data">
+ <form class="pds-btraining-form" id="pds-btraining-form" method="POST" enctype="multipart/form-data">
  
  <input type="text" name="user_id"  value="<?php echo $user->id; ?>" style="height: 30px;border: none;">
  <input type="text" name="employee_id"  value="<?php if(isset($empID[0]->employee_no)){ echo $empID[0]->employee_no; }else{ echo 0; } ?>" style="height: 30px;border: none;">
@@ -3606,7 +3606,7 @@ tags will be replaced.-->
 
  <tr class=xl6553527828 height=31 style='mso-height-source:userset;height:23.25pt'>
   <td colspan=4 height=31 class=xl18227828 width=450 style='border-left: .5pt solid black;border-right:.5pt solid black;
-  height:23.25pt;width:339pt;padding:3px;'><input type="text" name="pds3[]" value="<?php echo (isset($secVII[19]->training_title) ? $secVII[19]->training_title : ''); ?>" style="height:30px; width:538px; border: none;border-color: transparent;"></td>
+  height:23.25pt;width:339pt;padding:3px;'><input type="text" name="pds3[]" value="<?php echo (isset($secVII[19]->training_title) ? $secVII[19]->training_title : ''); ?>" style="height:30px; width:538px; border: none;border-color: transparent;" required></td>
   <td class=xl9127828 ><input type="date" name="pds3[]" value="<?php echo (isset($secVII[19]->training_from) ? $secVII[19]->training_from : ''); ?>" style="height:30px; width:155px; border: none;border-color: transparent;"></td>
   <td class=xl6527828 border-left:none'><input type="date" name="pds3[]" value="<?php echo (isset($secVII[19]->training_to) ? $secVII[19]->training_to : ''); ?>" style="height:30px; width:155px; border: none;border-color: transparent;"></td>
   <td class=xl8027828 width=71 style='border-left:none;width:53pt'><input type="number" name="pds3[]" value="<?php echo (isset($secVII[19]->training_hours) ? $secVII[19]->training_hours : ''); ?>" style="height:30px; width:155px; border: none;border-color: transparent;"></td>
@@ -3620,7 +3620,7 @@ tags will be replaced.-->
 
  <tr height=18 style='height:13.5pt'>
   <td colspan=11 height=18 class=xl9327828 style='border-right:1.0pt solid black;
-  height:13.5pt'><a href="{{ url('sheet3/training3').'/'.$user->id }}" style="color:red;" target="_blank">(Continue on separate sheet if necessary)</a></br><button type="button" class="btn btn-success btn-submit-secVII" ><?php echo (count($secVII) > 0 ? 'Update Section VII' : 'Save Section VII' ); ?></button></td>
+  height:13.5pt'><a href="{{ url('sheet3/training3').'/'.$user->id }}" style="color:red;" target="_blank">(Continue on separate sheet if necessary)</a></br><button type="submit" class="btn btn-success btn-submit-btrainings" ><?php echo (count($secVII) > 0 ? 'Update Page 2 Section VII' : 'Save Page 2 Section VII' ); ?></button></td>
   <td class=xl6553527828></td>
   <td class=xl6553527828></td>
  </tr>

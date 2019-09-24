@@ -3371,7 +3371,7 @@ tags will be replaced.-->
   <td class=xl6553527828></td>
  </tr>
 
- <form class="pds-training-form" id="pds-training-form" method="POST" enctype="multipart/form-data">
+ <form class="pds-ctraining-form" id="pds-ctraining-form" method="POST" enctype="multipart/form-data">
  
  <input type="text" name="user_id"  value="<?php echo $user->id; ?>" style="height: 30px;border: none;">
  <input type="text" name="employee_id"  value="<?php if(isset($empID[0]->employee_no)){ echo $empID[0]->employee_no; }else{ echo 0; } ?>" style="height: 30px;border: none;">
@@ -3620,7 +3620,7 @@ tags will be replaced.-->
 
  <tr height=18 style='height:13.5pt'>
   <td colspan=11 height=18 class=xl9327828 style='border-right:1.0pt solid black;
-  height:13.5pt'><a href="#" style="color:red;" target="_blank">(Continue on separate sheet if necessary)</a></br><button type="button" class="btn btn-success btn-submit-secVII" ><?php echo (count($secVII) > 0 ? 'Update Section VII' : 'Save Section VII' ); ?></button></td>
+  height:13.5pt'><a href="#" style="color:red;" target="_blank">(Continue on separate sheet if necessary)</a></br><button type="button" class="btn btn-success btn-submit-ctrainings" ><?php echo (count($secVII) > 0 ? 'Update Page 3 Section VII' : 'Save Page 3 Section VII' ); ?></button></td>
   <td class=xl6553527828></td>
   <td class=xl6553527828></td>
  </tr>

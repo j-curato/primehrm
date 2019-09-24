@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Btraining;
-use App\Training;
 use App\Employee as Employee;
 
 use Illuminate\Http\Request;
@@ -39,7 +38,30 @@ class BtrainingsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = auth()->user();
+
+        for( $i=0; $i < count($request['pds3']); $i+=6 ){
+
+            $secVII = new Btraining();
+                      
+            //$secVII->user_id            = $user->id;
+            $secVII->user_id            = $request['user_id'];
+            $secVII->employee_id        = $request['employee_id'];
+            $secVII->training_title     = $request['pds3'][$i];
+            $secVII->training_from      = $request['pds3'][$i+1];
+            $secVII->training_to        = $request['pds3'][$i+2];
+            $secVII->training_hours     = $request['pds3'][$i+3];
+            $secVII->training_type      = $request['pds3'][$i+4];
+            $secVII->training_sponsor   = $request['pds3'][$i+5];
+            $secVII->save();
+
+            if($i+5 == 119){
+                $notification = "Success";
+            }
+
+        }
+
+        return json_encode(array('notify'=>$notification));
     }
 
     /**
@@ -57,14 +79,14 @@ class BtrainingsController extends Controller
 
          $segmentID = null;
          $empID = Employee::select('employee_no')->where('user_id',$user->id)->get();
-         $secVII = Training::where('user_id',$user->id)->orderBy('id','ASC')->get();
+         $secVII = Btraining::where('user_id',$user->id)->orderBy('id','ASC')->get();
 
        }else{
 
          $segmentID = request()->segment(3);
          $user->id = $id;
          $empID = Employee::select('employee_no')->where('user_id',$id)->get();
-         $secVII = Training::where('user_id',$id)->orderBy('id','ASC')->get();
+         $secVII = Btraining::where('user_id',$id)->orderBy('id','ASC')->get();
 
        }
 
@@ -91,7 +113,28 @@ class BtrainingsController extends Controller
      */
     public function update(Request $request, Btraining $btraining)
     {
-        //
+        $user = auth()->user();
+
+        $secVII = Btraining::where('user_id',$request['user_id'])->orderBy('id','ASC')->get();
+
+        for( $i=0, $j=0; $i < count($request['pds3']); $i+=6, $j++ ){
+            
+            $secVII[$j]->employee_id        = $request['employee_id'];
+            $secVII[$j]->training_title     = $request['pds3'][$i];
+            $secVII[$j]->training_from      = $request['pds3'][$i+1];
+            $secVII[$j]->training_to        = $request['pds3'][$i+2];
+            $secVII[$j]->training_hours     = $request['pds3'][$i+3];
+            $secVII[$j]->training_type      = $request['pds3'][$i+4];
+            $secVII[$j]->training_sponsor   = $request['pds3'][$i+5];
+            $secVII[$j]->save();
+
+            if($i+5 == 119){
+                $notification = "Success";
+            }
+
+        }
+
+        return json_encode(array('notify'=>$notification));
     }
 
     /**

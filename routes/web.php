@@ -76,6 +76,12 @@ Route::post('/updateEmpVolWork', 'VoluntariesController@update');
 Route::post('/addemployeetraining', 'TrainingsController@store');
 Route::post('/updateEmpTraining', 'TrainingsController@update');
 
+Route::post('/addemployeeBtraining', 'BtrainingsController@store');
+Route::post('/updateEmpBTraining', 'BtrainingsController@update');
+
+Route::post('/addemployeeCtraining', 'CtrainingsController@store');
+Route::post('/updateEmpCTraining', 'CtrainingsController@update');
+
 Route::post('/addemployeeothers', 'OthersController@store');
 Route::post('/updateEmpOthers', 'OthersController@update');
 
@@ -128,7 +134,7 @@ Route::get('/getpayee', 'PayeesController@getpayee');
 
 
 Auth::routes();
-Route::get('/index', 'FimsDashboardController@index')->middleware('auth');
+Route::get('/index', 'FimsDashboardController@index');
 /*Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });*/
