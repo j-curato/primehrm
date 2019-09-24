@@ -73,8 +73,35 @@ class CtrainingsController extends Controller
      */
     public function show(Ctraining $ctraining, $id=null)
     {
+
        $user = auth()->user();
        $segment = request()->segment(2);
+
+       if(is_null($id)){
+
+        $secVII = Ctraining::where('user_id',$user->id)->orderBy('id','ASC')->get();
+
+       }else{
+
+        $secVII = Ctraining::where('user_id',$id)->orderBy('id','ASC')->get();
+
+       }
+       
+
+       return view('sheet3-extend2',compact('user','secVII','segment'));
+       
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Ctraining  $ctraining
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Ctraining $ctraining, $id=null)
+    {
+        $user = auth()->user();
+        $segment = request()->segment(2);
 
        if(is_null($id)){
 
@@ -92,17 +119,6 @@ class CtrainingsController extends Controller
        }
 
         return view('PDS3-extend2',compact('user','secVII','segment','empID','segmentID'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Ctraining  $ctraining
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Ctraining $ctraining)
-    {
-        //
     }
 
     /**

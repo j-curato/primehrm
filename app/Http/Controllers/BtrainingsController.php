@@ -72,6 +72,33 @@ class BtrainingsController extends Controller
      */
     public function show(Btraining $btraining,$id=null)
     {
+
+       $user = auth()->user();
+       $segment = request()->segment(2);
+
+       if(is_null($id)){
+
+        $secVII = Btraining::where('user_id',$user->id)->orderBy('id','ASC')->get();
+
+       }else{
+
+        $secVII = Btraining::where('user_id',$id)->orderBy('id','ASC')->get();
+
+       }
+       
+
+       return view('sheet3-extend',compact('user','secVII','segment'));
+       
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Btraining  $btraining
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Btraining $btraining,$id=null)
+    {
        $user = auth()->user();
        $segment = request()->segment(2);
 
@@ -91,17 +118,6 @@ class BtrainingsController extends Controller
        }
 
         return view('PDS3-extend',compact('user','secVII','segment','empID','segmentID'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Btraining  $btraining
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Btraining $btraining)
-    {
-        //
     }
 
     /**
