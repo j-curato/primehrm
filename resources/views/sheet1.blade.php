@@ -5562,12 +5562,12 @@ AAAPAAAAAAAAAAAAAAAAAF0EAABkcnMvZG93bnJldi54bWxQSwUGAAAAAAQABAD1AAAAowUAAAAA
  <tr height=20 style='height:15.0pt; background-color:#fff;'>
   <td height=20 class=xl945155 style='height:15.0pt'>2.</td>
   <td colspan=2 class=xl955155 style='border-right:.5pt solid black'>SURNAME</td>
-<td colspan=11 class=xl975155 style='padding: 3px; border-right:1.0pt solid black; border-left:none'><?php echo $employees[0]->emp_lname; ?></td>
+<td colspan=11 class=xl975155 style='padding: 3px; border-right:1.0pt solid black; border-left:none'><?php if(isset($employees[0]->emp_lname)){ echo $employees[0]->emp_lname; }else{ echo "N/A"; } ?></td>
  </tr>
  <tr height=20 style='height:15.0pt;background-color:#fff;'>
   <td height=20 class=xl945155 style='height:15.0pt'>&nbsp;</td>
   <td colspan=2 class=xl995155 style='padding: 3px; border-right:.5pt solid black'>FIRST NAME</td>
-  <td class=xl1015155 style='padding: 3px;border-top:none;border-left:none;'><?php echo $employees[0]->emp_fname; ?></td>
+  <td class=xl1015155 style='padding: 3px;border-top:none;border-left:none;'><?php if(isset($employees[0]->emp_fname)){ echo $employees[0]->emp_fname; }else{ echo "N/A"; } ?></td>
   <td class=xl1025155 style='border-top:none'>&nbsp;</td>
   <td class=xl1025155 style='border-top:none'>&nbsp;</td>
   <td class=xl1025155 style='border-top:none'>&nbsp;</td>
@@ -5576,13 +5576,13 @@ AAAPAAAAAAAAAAAAAAAAAF0EAABkcnMvZG93bnJldi54bWxQSwUGAAAAAAQABAD1AAAAowUAAAAA
   <td class=xl1025155 style='border-top:none'>&nbsp;</td>
   <td class=xl1025155 style='border-top:none'>&nbsp;</td>
   <td colspan=3 class=xl1035155 style='padding: 3px; border-right:1.0pt solid black'>NAME
-  EXTENSION (JR., SR)<span style='mso-spacerun:yes'>     </span><?php echo $employees[0]->emp_extension; ?></td>
+  EXTENSION (JR., SR)<span style='mso-spacerun:yes'>     </span><?php if(isset($employees[0]->emp_extension)){ echo $employees[0]->emp_extension; }else{ echo "N/A"; } ?></td>
  </tr>
  <tr height=21 style='height:15.75pt;background-color:#fff;'>
   <td height=21 class=xl1065155 style='height:15.75pt'>&nbsp;</td>
   <td colspan=2 class=xl1075155 style='border-right:.5pt solid black'>MIDDLE
   NAME</td>
-  <td class=xl1095155 style='padding: 3px; border-top:none;border-left:none'><?php echo $employees[0]->emp_mname; ?></td>
+  <td class=xl1095155 style='padding: 3px; border-top:none;border-left:none'><?php if(isset($employees[0]->emp_mname)){ echo $employees[0]->emp_mname; }else{ echo "N/A"; } ?></td>
   <td class=xl1105155 style='border-top:none'>&nbsp;</td>
   <td class=xl1105155 style='border-top:none'>&nbsp;</td>
   <td class=xl1105155 style='border-top:none'>&nbsp;</td>
@@ -5600,7 +5600,7 @@ AAAPAAAAAAAAAAAAAAAAAF0EAABkcnMvZG93bnJldi54bWxQSwUGAAAAAAQABAD1AAAAowUAAAAA
   width:103pt'>DATE OF BIRTH <br>
     (mm/dd/yyyy)<span style='mso-spacerun:yes'>  </span></td>
   <td colspan=3 class=xl1155155 width=214 style='border-right:1.0pt solid black;
-  border-left:none;width:160pt; text-align: left;'><?php echo $employees[0]->emp_date_of_birth; ?></td>
+  border-left:none;width:160pt; text-align: left; font-weight:bold;'><?php if(isset($employees[0]->emp_date_of_birth)){ echo $employees[0]->emp_date_of_birth; }else{ echo "N/A"; } ?></td>
   <td class=xl1175155 colspan=2>16. CITIZENSHIP</td>
   <td class=xl955155 style='border-top:none'>&nbsp;</td>
   <td colspan=5 class=xl1185155 style='border-right:1.0pt solid black'><input type="checkbox" name="citizenship" value="1" <?php if(isset($employees[0]->citizenship)){ if($employees[0]->citizenship == true){ ?> checked <?php }} ?>>
@@ -5626,7 +5626,7 @@ AAAPAAAAAAAAAAAAAAAAAF0EAABkcnMvZG93bnJldi54bWxQSwUGAAAAAAQABAD1AAAAowUAAAAA
   <td height=28 class=xl1295155 style='height:21.0pt'>4.</td>
   <td class=xl1305155 style='border-top:none'>PLACE OF BIRTH</td>
   <td class=xl1305155 style='border-top:none'>&nbsp;</td>
-  <td colspan=3 class=xl1315155 width=214 style='padding: 3px; width:160pt; text-align:left;'><?php echo $employees[0]->emp_birthplace; ?></td>
+  <td colspan=3 class=xl1315155 width=214 style='padding: 3px; width:160pt; text-align:left; font-weight:bold;'><?php if(isset($employees[0]->emp_birthplace)){ echo $employees[0]->emp_birthplace; }else{ echo "N/A"; } ?></td>
   <td colspan=3 class=xl1335155>If holder of<span style='mso-spacerun:yes'> 
   </span>dual citizenship,<span style='mso-spacerun:yes'> </span></td>
   <td class=xl1355155>&nbsp;</td>
@@ -5680,7 +5680,7 @@ BQYAAAAABAAEAPUAAAB+BQAAAAA=
   <td colspan=3 class=xl1435155 style='border-right:.5pt solid black'>please
   indicate the details.</td>
   <td class=xl895155>
-	  <select name="country" style="width:315px;">
+	  <select name="country" style="width:315px; font-weight:bold;">
 		  <option value="Philippines">Philippines</option>
 	</select>
 </td>
@@ -5698,8 +5698,8 @@ BQYAAAAABAAEAPUAAAB+BQAAAAA=
   style='mso-spacerun:yes'>Single</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type="checkbox" name="emp_marital_status" value="Married" <?php if(isset($employees[0]->emp_marital_status)){ if($employees[0]->emp_marital_status == "Married"){ ?> checked <?php }} ?>><span
   style='mso-spacerun:yes'>Married</span></td>
   <td class=xl1505155 colspan=2>17. RESIDENTIAL ADDRESS</td>
-  <td colspan=3 class=xl1525155 style="padding: 3px;"><?php echo $employees[0]->res_houseblocklot; ?></td>
-  <td colspan=3 class=xl1535155 style='border-right:1.0pt solid black'>&nbsp;<?php echo $employees[0]->res_street; ?></td>
+  <td colspan=3 class=xl1525155 style="padding: 3px;"><?php if(isset($employees[0]->res_houseblocklot)){ echo $employees[0]->res_houseblocklot; }else{ echo "N/A"; } ?></td>
+  <td colspan=3 class=xl1535155 style='border-right:1.0pt solid black'>&nbsp;<?php if(isset($employees[0]->res_street)){ echo $employees[0]->res_street; }else{ echo "N/A"; } ?></td>
  </tr>
  <tr height=20 style='height:15.0pt'>
   <td height=20 class=xl1595155 style='height:15.0pt'>&nbsp;</td>
@@ -5718,9 +5718,9 @@ BQYAAAAABAAEAPUAAAB+BQAAAAA=
   <td class=xl1655155></td>
   <td class=xl1595155>&nbsp;</td>
   <td class=xl1605155>&nbsp;</td>
-  <td colspan=3 rowspan=3 class=xl1665155 style='border-bottom:.5pt solid #A6A6A6'><?php echo $employees[0]->res_subvillage; ?></td>
+  <td colspan=3 rowspan=3 class=xl1665155 style='border-bottom:.5pt solid #A6A6A6'><?php if(isset($employees[0]->res_subvillage)){ echo $employees[0]->res_subvillage; }else{ echo "N/A"; } ?></td>
   <td colspan=3 rowspan=3 class=xl1685155 style='border-right:1.0pt solid black;
-  border-bottom:.5pt solid #A6A6A6'><?php echo $employees[0]->res_barangay; ?></td>
+  border-bottom:.5pt solid #A6A6A6'><?php if(isset($employees[0]->res_barangay)){ echo $employees[0]->res_barangay; }else{ echo "N/A"; } ?></td>
  </tr>
  <tr height=20 style='height:5.0pt'>
   <td height=20 class=xl1555155 style='height:5.0pt'>&nbsp;</td>
@@ -5755,11 +5755,11 @@ BQYAAAAABAAEAPUAAAB+BQAAAAA=
   height:30.0pt;border-top:none'>7.</td>
   <td colspan=2 rowspan=2 class=xl1895155 style='border-right:.5pt solid black;
   border-bottom:.5pt solid black'>HEIGHT (m)</td>
-  <td colspan=3 rowspan=2 class=xl1915155 style='border-bottom:.5pt solid black;'><?php echo $employees[0]->emp_height; ?></td>
+  <td colspan=3 rowspan=2 class=xl1915155 style='border-bottom:.5pt solid black;'><?php if(isset($employees[0]->emp_height)){ echo $employees[0]->emp_height; }else{ echo "N/A"; } ?></td>
   <td class=xl1245155>&nbsp;</td>
   <td class=xl995155>&nbsp;</td>
-  <td colspan=3 class=xl1525155 style="padding: 3px;"><?php echo $employees[0]->res_citymun; ?></td>
-  <td colspan=3 class=xl1535155 style='padding: 3px; border-right:1.0pt solid black'><?php echo $employees[0]->res_province; ?></td>
+  <td colspan=3 class=xl1525155 style="padding: 3px;"><?php if(isset($employees[0]->res_citymun)){ echo $employees[0]->res_citymun; }else{ echo "N/A"; } ?></td>
+  <td colspan=3 class=xl1535155 style='padding: 3px; border-right:1.0pt solid black'><?php if(isset($employees[0]->res_province)){ echo $employees[0]->res_province; }else{ echo "N/A"; } ?></td>
  </tr>
  <tr height=20 style='height:15.0pt'>
   <td height=20 class=xl1245155 style='height:15.0pt'>&nbsp;</td>
@@ -5772,22 +5772,22 @@ BQYAAAAABAAEAPUAAAB+BQAAAAA=
   <td colspan=2 class=xl2005155 style='border-right:.5pt solid black'>WEIGHT
   (kg)</td>
 
-  <td colspan=3 class=xl2025155 style="padding: 3px;"><?php echo $employees[0]->emp_weight; ?></td>
+  <td colspan=3 class=xl2025155 style="padding: 3px;"><?php if(isset($employees[0]->emp_weight)){ echo $employees[0]->emp_weight; }else{ echo "N/A"; } ?></td>
   
   <td colspan=2 class=xl2035155 width=130 style='border-right:.5pt solid black;
   width:98pt'>ZIP CODE<span style='mso-spacerun:yes'>    </span></td>
   <td colspan=6 class=xl2055155 width=383 style='padding: 3px;border-right:1.0pt solid black;
-  border-left:none;width:289pt'><?php echo $employees[0]->res_zipcode; ?></td>
+  border-left:none;width:289pt; font-size: 13px; font-weight: bold;'><?php if(isset($employees[0]->res_zipcode)){ echo $employees[0]->res_zipcode; }else{ echo "N/A"; } ?></td>
  </tr>
  <tr height=20 style='height:15.0pt'>
   <td rowspan=2 height=40 class=xl2085155 style='border-bottom:.5pt solid black;
   height:30.0pt'>9.</td>
   <td colspan=2 rowspan=2 class=xl1895155 style='border-right:.5pt solid black;
   border-bottom:.5pt solid black'>BLOOD TYPE</td>
-  <td colspan=3 rowspan=2 class=xl2095155 style='border-bottom:.5pt solid black;'><?php echo $employees[0]->emp_blood_type; ?></td>
+  <td colspan=3 rowspan=2 class=xl2095155 style='border-bottom:.5pt solid black;'><?php if(isset($employees[0]->emp_blood_type)){ echo $employees[0]->emp_blood_type; }else{ echo "N/A"; } ?></td>
   <td class=xl2105155 colspan=2>18. PERMANENT ADDRESS</td>
-  <td colspan=3 class=xl1525155 style="padding: 3px;"><?php echo $employees[0]->perm_houseblocklot; ?></td>
-  <td colspan=3 class=xl2115155 style='padding: 3px; border-right:1.0pt solid black'><?php echo $employees[0]->perm_street; ?></td>
+  <td colspan=3 class=xl1525155 style="padding: 3px;"><?php if(isset($employees[0]->perm_houseblocklot)){ echo $employees[0]->perm_houseblocklot; }else{ echo "N/A"; } ?></td>
+  <td colspan=3 class=xl2115155 style='padding: 3px; border-right:1.0pt solid black'><?php if(isset($employees[0]->perm_street)){ echo $employees[0]->perm_street; }else{ echo "N/A"; } ?></td>
  </tr>
  <tr height=20 style='height:15.0pt'>
   <td height=20 class=xl1245155 style='height:15.0pt'>&nbsp;</td>
@@ -5801,11 +5801,11 @@ BQYAAAAABAAEAPUAAAB+BQAAAAA=
   height:30.0pt;border-top:none'>10.</td>
   <td colspan=2 rowspan=2 class=xl1895155 style='border-right:.5pt solid black;
   border-bottom:.5pt solid black'>GSIS ID NO.</td>
-  <td colspan=3 rowspan=2 class=xl2095155 style='border-bottom:.5pt solid black;'><?php echo $employees[0]->emp_gsis_number; ?></td>
+  <td colspan=3 rowspan=2 class=xl2095155 style='border-bottom:.5pt solid black;'><?php if(isset($employees[0]->emp_gsis_number)){ echo $employees[0]->emp_gsis_number; }else{ echo "N/A"; } ?></td>
   <td class=xl1595155>&nbsp;</td>
   <td class=xl1605155>&nbsp;</td>
-  <td colspan=3 class=xl1525155 style="padding: 3px;"><?php echo $employees[0]->perm_subvillage; ?></td>
-  <td colspan=3 class=xl2145155 style='padding: 3px; border-right:1.0pt solid black'><?php echo $employees[0]->perm_barangay; ?></td>
+  <td colspan=3 class=xl1525155 style="padding: 3px;"><?php if(isset($employees[0]->perm_subvillage)){ echo $employees[0]->perm_subvillage; }else{ echo "N/A"; } ?></td>
+  <td colspan=3 class=xl2145155 style='padding: 3px; border-right:1.0pt solid black'><?php if(isset($employees[0]->perm_barangay)){ echo $employees[0]->perm_barangay; }else{ echo "N/A"; } ?></td>
  </tr>
  <tr height=20 style='height:15.0pt'>
   <td height=20 class=xl1595155 style='height:15.0pt'>&nbsp;</td>
@@ -5818,11 +5818,11 @@ BQYAAAAABAAEAPUAAAB+BQAAAAA=
   height:30.0pt;border-top:none'>11.</td>
   <td colspan=2 rowspan=2 class=xl1895155 style='border-right:.5pt solid black;
   border-bottom:.5pt solid black'>PAG-IBIG ID NO.</td>
-  <td colspan=3 rowspan=2 class=xl2095155 style='border-bottom:.5pt solid black'><?php echo $employees[0]->emp_pagibig_number; ?></td>
+  <td colspan=3 rowspan=2 class=xl2095155 style='border-bottom:.5pt solid black'><?php if(isset($employees[0]->perm_citymun)){ echo $employees[0]->perm_citymun; }else{ echo "N/A"; } ?></td>
   <td class=xl1595155>&nbsp;</td>
   <td class=xl2205155>&nbsp;</td>
-  <td colspan=3 class=xl2215155 style='padding: 3px;border-left:none'><?php echo $employees[0]->perm_citymun; ?></td>
-  <td colspan=3 class=xl2225155 style='padding: 3px;border-right:1.0pt solid black'><?php echo $employees[0]->perm_province; ?></td>
+  <td colspan=3 class=xl2215155 style='padding: 3px;border-left:none'><?php if(isset($employees[0]->perm_citymun)){ echo $employees[0]->perm_citymun; }else{ echo "N/A"; } ?></td>
+  <td colspan=3 class=xl2225155 style='padding: 3px;border-right:1.0pt solid black'><?php if(isset($employees[0]->perm_province)){ echo $employees[0]->perm_province; }else{ echo "N/A"; } ?></td>
  </tr>
  <tr height=20 style='height:15.0pt'>
   <td height=20 class=xl1595155 style='height:15.0pt'>&nbsp;</td>
@@ -5864,7 +5864,7 @@ BQYAAAAABAAEAPUAAAB+BQAAAAA=
   <td colspan=3 class=xl2095155 style="padding: 3px;"><?php if(isset($employees[0]->employee_no)){ echo $employees[0]->employee_no; }else{ echo "N/A"; } ?></td>
   <td class=xl2105155 colspan=2>21. E-MAIL ADDRESS (if any)</td>
   <td colspan=6 class=xl2385155 width=383 style='border-right:1.0pt solid black;
-  width:289pt'><?php if(isset($employees[0]->emp_email_address)){ echo $employees[0]->emp_email_address; }else{ echo "N/A"; } ?></td>
+  width:289pt;font-size:12px; font-weight: bold; text-decoration:none; color:#000;'><?php if(isset($employees[0]->emp_email_address)){ echo $employees[0]->emp_email_address; }else{ echo "N/A"; } ?></td>
  </tr>
  <tr height=23 style='height:17.25pt'>
   <td height=23 class=xl2415155 colspan=4 style='height:17.25pt'>II.<span
