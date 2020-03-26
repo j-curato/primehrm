@@ -34,6 +34,9 @@ Route::get('edit/sheet3/{id?}','VoluntariesController@edit');
 Route::get('view/sheet4/{id?}','QuestionsController@show');
 Route::get('edit/sheet4/{id?}','QuestionsController@edit');
 
+Route::get('sheet2/workExp2/{id?}', 'BworkController@edit');
+Route::post('/addemployeeworkexp2', 'BworkController@store');
+
 Route::get('sheet3/training2/{id?}', 'BtrainingsController@edit');
 Route::get('sheet3/training3/{id?}', 'CtrainingsController@edit');
 Route::get('sheet3/trainingpage2/{id?}', 'BtrainingsController@show');

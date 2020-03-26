@@ -2514,7 +2514,7 @@ tags will be replaced.-->
 
  <tr height=17 style='mso-height-source:userset;height:12.75pt'>
   <td colspan=13 height=17 class=xl1385850 style='border-right:1.0pt solid black;
-  height:12.75pt'>(Continue on separate sheet if necessary)</td>
+  height:12.75pt'><a href="{{ url('sheet2/workExp2').'/'.$user->id }}" style="color:red;" target="_blank">(Continue on separate sheet if necessary)</a></td>
   <td class=xl655355850></td>
  </tr>
  <tr height=38 style='mso-height-source:userset;height:28.5pt'>

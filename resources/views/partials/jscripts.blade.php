@@ -1589,6 +1589,67 @@
                 
             });
 
+          //extend work form
+
+          $(".btn-submit-workExt").click(function(e){
+                e.preventDefault();
+
+                $('body').loadingModal({
+                        text: 'Loading...'
+                        });
+
+                if($(this).text()=="Save Section V-Form 2"){
+
+                  $.post("{{ url('/addemployeeworkexp2') }}", $("#pds-work-form2").serialize(), function(data){
+
+                        if(data.notify=='Success'){  
+                           $('body').loadingModal('hide');
+                             swal({
+                                    title: "Record successfully saved",
+                                    text: "Message will close in 2 seconds",
+                                    type: "success",
+                                    timer: 2000
+                                  });
+
+                        } else{
+
+                          console.log(data.notify);
+
+                        }
+                    
+                    },"json");
+
+                  $(this).text("Update Section V-Form 2");
+
+                }else{
+
+                  $.post( "{{ url('/updateEmpWorkExp2') }}", $("#pds-work-form2").serialize(), function(data){
+
+                      if(data.notify=='Success'){  
+                        
+                           $('body').loadingModal('hide');
+                             swal({
+                                    title: "Record successfully updated",
+                                    text: "Message will close in 2 seconds",
+                                    type: "success",
+                                    timer: 2000
+                                  });
+
+                       }else{
+
+                          console.log(data.notify);
+
+                      }
+
+                    },"json");
+
+                }
+                
+            });
+
+
+          //end work extension form
+
 
               $(".btn-submit-secVI").click(function(e){
                 e.preventDefault();

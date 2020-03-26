@@ -5460,7 +5460,7 @@ tags will be replaced.-->
  </tr>
  <tr height=21 style='height:15.75pt'>
   <td height=21 class=xl815155 colspan=3 style='height:15.75pt'>Print legibly.
-  Tick appropriate boxes <span style='display:none'>(<span
+  Tick appropriate boxes and use separate sheet if necessary. Indicate N/A if not applicable. DO NOT ABBREVIATE.<span style='display:none'>(<span
   style='mso-spacerun:yes'>     </span>) and use separate sheet if necessary.
   Indicate N/A if not applicable.<span style='mso-spacerun:yes'>  </span><font
   class="font55155">DO NOT ABBREVIATE.</font></span></td>
