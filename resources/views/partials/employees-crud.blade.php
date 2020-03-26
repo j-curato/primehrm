@@ -89,28 +89,28 @@
                     <td>{{ $employee->emp_photo_url }}</td> -->
                       <td>
                         <center>    
-                          <a href="{{ $user->username=='admin' ? url('/view/sheet1').'/'.$employee->user_id : url('/view/sheet1') }}" target="_blank" class="btn btn-square btn-success" ><i class="nav-icon icon-eye"></i> View </a>
+                          <a href="{{ $user->username=='admin' ? url('/view/sheet1').'/'.$employee->user_id : url('/view/sheet1') }}" target="_blank" class="btn btn-square btn-success" ><i class="nav-icon icon-printer"></i> Print </a>
                           <a href="{{ $user->username=='admin' ? url('/edit/sheet1').'/'.$employee->user_id : url('/edit/sheet1') }}" class="btn btn-square btn-warning" ><i class="nav-icon icon-pencil"></i> Edit </a>
                         </center>
                        </td>
 
                        <td>
                        <center>
-                         <a href="{{ $user->username=='admin' ? url('/view/sheet2').'/'.$employee->user_id : url('/view/sheet2') }}" target="_blank" class="btn btn-square btn-success btn-showAmort" ><i class="nav-icon icon-eye"></i> View </a>
+                         <a href="{{ $user->username=='admin' ? url('/view/sheet2').'/'.$employee->user_id : url('/view/sheet2') }}" target="_blank" class="btn btn-square btn-success btn-showAmort" ><i class="nav-icon icon-printer"></i> Print </a>
                          <a href="{{ $user->username=='admin' ? url('/edit/sheet2').'/'.$employee->user_id : url('/edit/sheet2') }}" class="btn btn-square btn-warning btn-showAmort" ><i class="nav-icon icon-pencil"></i> Edit </a>
                         </center>  
                        </td>
 
                        <td>
                        <center>
-                         <a href="{{ $user->username=='admin' ? url('/view/sheet3').'/'.$employee->user_id : url('/view/sheet3') }}" target="_blank" class="btn btn-square btn-success btn-showAmort" ><i class="nav-icon icon-eye"></i> View </a>
+                         <a href="{{ $user->username=='admin' ? url('/view/sheet3').'/'.$employee->user_id : url('/view/sheet3') }}" target="_blank" class="btn btn-square btn-success btn-showAmort" ><i class="nav-icon icon-printer"></i> Print </a>
                          <a href="{{ $user->username=='admin' ? url('/edit/sheet3').'/'.$employee->user_id : url('/edit/sheet3') }}" class="btn btn-square btn-warning btn-showAmort" ><i class="nav-icon icon-pencil"></i> Edit </a>
                         </center>  
                        </td>
 
                        <td>
                        <center>
-                         <a href="{{ $user->username=='admin' ? url('/view/sheet4').'/'.$employee->user_id : url('/view/sheet4') }}" target="_blank" class="btn btn-square btn-success btn-showAmort" ><i class="nav-icon icon-eye"></i> View </a>
+                         <a href="{{ $user->username=='admin' ? url('/view/sheet4').'/'.$employee->user_id : url('/view/sheet4') }}" target="_blank" class="btn btn-square btn-success btn-showAmort" ><i class="nav-icon icon-printer"></i> Print </a>
                          <a href="{{ $user->username=='admin' ? url('/edit/sheet4').'/'.$employee->user_id : url('/edit/sheet4') }}" class="btn btn-square btn-warning btn-showAmort" ><i class="nav-icon icon-pencil"></i> Edit </a>
                         </center>  
                        </td>
